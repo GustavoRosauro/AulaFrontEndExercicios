@@ -1,0 +1,29 @@
+body{
+    margin-top: 0;
+    width: 100%;
+}
+.conteudo{
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 12.5%;
+}
+.conteudo button{
+    background-color: green;
+    color: white;
+    height: 25px;
+}
+.conteudo img{
+    height: 250px;
+}
+.primeiroContainer{
+    float:left;
+    width: 33.33%;
+}
+.segundoContainer{
+    float:left;
+    width: 33.33%;
+}
+.terceiroContainer{
+    float:left;
+    width: 33.33%;
+}
