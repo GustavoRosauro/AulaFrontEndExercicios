@@ -1,4 +1,4 @@
-class Pessoa{
+class  Pessoa{
     nome:string;
     idade:number;    
      constructor(nome:string,idade:number){
@@ -16,5 +16,13 @@ class PessoaFisica extends Pessoa{
     }
 falar():void{
     alert(`Pessoa Fisica ${this.nome} idade: ${this.idade} conversando`);
+}
+}
+class PessoaJuridica extends Pessoa{
+    constructor(nome:string,idade:number){
+        super(nome,idade);
+    }
+falar():void{
+    alert(`Pessoa Juridica ${this.nome} idade: ${this.idade} conversando`);
 }
 }

@@ -31,3 +31,13 @@ var PessoaFisica = /** @class */ (function (_super) {
     };
     return PessoaFisica;
 }(Pessoa));
+var PessoaJuridica = /** @class */ (function (_super) {
+    __extends(PessoaJuridica, _super);
+    function PessoaJuridica(nome, idade) {
+        return _super.call(this, nome, idade) || this;
+    }
+    PessoaJuridica.prototype.falar = function () {
+        alert("Pessoa Juridica " + this.nome + " idade: " + this.idade + " conversando");
+    };
+    return PessoaJuridica;
+}(Pessoa));

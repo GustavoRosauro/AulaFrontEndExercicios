@@ -5,14 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <select id="escolha">
+        <option value="1">Gato</option>
+        <option value="2">Pato</option>
+        <option value="3">Cachorro</option>
+    </select>
     <script src="pessoa.js"></script>
 </head>
 <body>
     <button onclick="hello()">Clique</button>
     <script>
+        let escolha = document.getElementById('escolha');
+        escolha.addEventListener('change',()=>{
+            switch (escolha.value) {
+                case "1":
+                    let pessoa = new PessoaFisica("Gustavo",29);
+                    pessoa.falar()
+                    break;
+                case "2":
+                    alert('Pato');
+                    break;
+                case "3":
+                    alert("Cachorro");
+                    break;
+                default:
+                    break;
+            }
+        })
         function hello(){
-            let pessoa = new PessoaFisica("Gustavo", 29);            
-            pessoa.falar();
+            let pessoas = []
+            pessoas[0] = new PessoaFisica("Gustavo",29);
+            pessoas[1] = new PessoaJuridica("Gustavo",29)
+            pessoas.forEach(pessoa =>{
+                pessoa.falar();
+            })
         }
     </script>
 </body>
